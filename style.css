@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+#nomeUser{
+    margin-top: 50px;
+    color: #ffffff;
+}
+header {
+    background-color: #4d4d4d;
+    color: #000000;
+    padding: 15px 0 50px;
+    width: 1349px; /* Largura fixa */
+    height: 50px; /* Altura fixa */
+    width: 100%;
+}
+
+.menu-btn {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+.menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #c2c2c2;
+    margin-bottom: 5px;
+}
+
+.menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #666;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.close-btn, #close-sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-btn:focus, #close-sidebar:focus {
+    outline: none;
+}
+
+.close-btn:hover, #close-sidebar:hover {
+    color: #ccc;
+}
+section {
+    margin-left: 280px;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.item{
+    background-color: #f0f0f0;
+    padding: 200px;
+    margin: 50px;
+    text-align: center;
+    flex-direction: row;
+    flex: 1; /* Cresce proporcionalmente dentro do container */
+}
+
+.detalhes{
+    padding: 200px;
+}
+footer{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        height: 300px; /* Altura opcional para o exemplo */
+    }
+    .item{
+        width: 60%; /* Define a largura dos itens */
+        flex-direction: column;
+    }
+}
